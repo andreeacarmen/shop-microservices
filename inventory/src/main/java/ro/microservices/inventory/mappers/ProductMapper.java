@@ -11,4 +11,13 @@ public final class ProductMapper {
 				.stock(product.getStock())
 				.build();
 	}
+
+	public static Product toEntity(ProductModel productModel) {
+		
+		return Product.builder()
+				.code(productModel.getCode())
+				.stock(productModel.getStock())
+				.price(productModel.getPrice())
+				.build();
+	}
 }
